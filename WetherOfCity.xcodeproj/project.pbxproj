@@ -13,6 +13,9 @@
 		1FE862F61BC4ED6800B23C4C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1FE862F51BC4ED6800B23C4C /* Images.xcassets */; };
 		1FE862F91BC4ED6800B23C4C /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1FE862F71BC4ED6800B23C4C /* LaunchScreen.xib */; };
 		1FE863051BC4ED6900B23C4C /* WetherOfCityTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FE863041BC4ED6900B23C4C /* WetherOfCityTests.swift */; };
+		1FE8630F1BC4F05500B23C4C /* CityCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FE8630E1BC4F05500B23C4C /* CityCell.swift */; };
+		1FE863111BC4FA1D00B23C4C /* DisplayVc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FE863101BC4FA1C00B23C4C /* DisplayVc.swift */; };
+		1FE863131BC4FD7200B23C4C /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1FE863121BC4FD7200B23C4C /* CoreLocation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,13 +32,16 @@
 		1FE862E91BC4ED6800B23C4C /* WetherOfCity.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WetherOfCity.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1FE862ED1BC4ED6800B23C4C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1FE862EE1BC4ED6800B23C4C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		1FE862F01BC4ED6800B23C4C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		1FE862F01BC4ED6800B23C4C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ViewController.swift; path = WetherOfCity/ViewController.swift; sourceTree = "<group>"; };
 		1FE862F31BC4ED6800B23C4C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		1FE862F51BC4ED6800B23C4C /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		1FE862F51BC4ED6800B23C4C /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = WetherOfCity/Images.xcassets; sourceTree = "<group>"; };
 		1FE862F81BC4ED6800B23C4C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		1FE862FE1BC4ED6900B23C4C /* WetherOfCityTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WetherOfCityTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1FE863031BC4ED6900B23C4C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1FE863041BC4ED6900B23C4C /* WetherOfCityTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WetherOfCityTests.swift; sourceTree = "<group>"; };
+		1FE8630E1BC4F05500B23C4C /* CityCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CityCell.swift; path = WetherOfCity/CityCell.swift; sourceTree = "<group>"; };
+		1FE863101BC4FA1C00B23C4C /* DisplayVc.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DisplayVc.swift; path = WetherOfCity/DisplayVc.swift; sourceTree = "<group>"; };
+		1FE863121BC4FD7200B23C4C /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +49,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1FE863131BC4FD7200B23C4C /* CoreLocation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,9 +63,48 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1F9BA7E31BC929C000B43527 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		1F9BA7E41BC929DD00B43527 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				1FE862F21BC4ED6800B23C4C /* Main.storyboard */,
+				1FE862F51BC4ED6800B23C4C /* Images.xcassets */,
+				1FE862F71BC4ED6800B23C4C /* LaunchScreen.xib */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		1F9BA7E51BC929E600B43527 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				1FE862F01BC4ED6800B23C4C /* ViewController.swift */,
+				1FE863101BC4FA1C00B23C4C /* DisplayVc.swift */,
+				1FE8630E1BC4F05500B23C4C /* CityCell.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		1F9BA7E61BC92AA200B43527 /* FrameWorks */ = {
+			isa = PBXGroup;
+			children = (
+				1FE863121BC4FD7200B23C4C /* CoreLocation.framework */,
+			);
+			name = FrameWorks;
+			sourceTree = "<group>";
+		};
 		1FE862E01BC4ED6800B23C4C = {
 			isa = PBXGroup;
 			children = (
+				1F9BA7E61BC92AA200B43527 /* FrameWorks */,
+				1F9BA7E31BC929C000B43527 /* Model */,
+				1F9BA7E41BC929DD00B43527 /* View */,
+				1F9BA7E51BC929E600B43527 /* Controller */,
 				1FE862EB1BC4ED6800B23C4C /* WetherOfCity */,
 				1FE863011BC4ED6900B23C4C /* WetherOfCityTests */,
 				1FE862EA1BC4ED6800B23C4C /* Products */,
@@ -78,10 +124,6 @@
 			isa = PBXGroup;
 			children = (
 				1FE862EE1BC4ED6800B23C4C /* AppDelegate.swift */,
-				1FE862F01BC4ED6800B23C4C /* ViewController.swift */,
-				1FE862F21BC4ED6800B23C4C /* Main.storyboard */,
-				1FE862F51BC4ED6800B23C4C /* Images.xcassets */,
-				1FE862F71BC4ED6800B23C4C /* LaunchScreen.xib */,
 				1FE862EC1BC4ED6800B23C4C /* Supporting Files */,
 			);
 			path = WetherOfCity;
@@ -213,7 +255,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				1FE862F11BC4ED6800B23C4C /* ViewController.swift in Sources */,
+				1FE863111BC4FA1D00B23C4C /* DisplayVc.swift in Sources */,
 				1FE862EF1BC4ED6800B23C4C /* AppDelegate.swift in Sources */,
+				1FE8630F1BC4F05500B23C4C /* CityCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -242,6 +286,7 @@
 				1FE862F31BC4ED6800B23C4C /* Base */,
 			);
 			name = Main.storyboard;
+			path = WetherOfCity;
 			sourceTree = "<group>";
 		};
 		1FE862F71BC4ED6800B23C4C /* LaunchScreen.xib */ = {
@@ -250,6 +295,7 @@
 				1FE862F81BC4ED6800B23C4C /* Base */,
 			);
 			name = LaunchScreen.xib;
+			path = WetherOfCity;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -411,6 +457,7 @@
 				1FE8630A1BC4ED6900B23C4C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		1FE8630B1BC4ED6900B23C4C /* Build configuration list for PBXNativeTarget "WetherOfCityTests" */ = {
 			isa = XCConfigurationList;
@@ -419,6 +466,7 @@
 				1FE8630D1BC4ED6900B23C4C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
